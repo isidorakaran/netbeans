@@ -4,8 +4,13 @@
  */
 package edunova;
 
+
+
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Collections;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +24,7 @@ public class Prozor extends javax.swing.JFrame {
      */
     public Prozor() {
         initComponents();
+       
     }
 
     /**
@@ -45,56 +51,66 @@ public class Prozor extends javax.swing.JFrame {
         setIconImages(null);
         getContentPane().setLayout(null);
 
-        lbliIme1.setFont(new java.awt.Font("Gabriola", 3, 24)); // NOI18N
-        lbliIme1.setForeground(new java.awt.Color(153, 0, 102));
+        lbliIme1.setFont(new java.awt.Font("Gabriola", 3, 48)); // NOI18N
+        lbliIme1.setForeground(new java.awt.Color(204, 0, 51));
         lbliIme1.setText("Upiši svoje ime:");
         getContentPane().add(lbliIme1);
-        lbliIme1.setBounds(20, 50, 134, 42);
+        lbliIme1.setBounds(130, 120, 270, 100);
 
-        lblIme2.setFont(new java.awt.Font("Gabriola", 3, 24)); // NOI18N
-        lblIme2.setForeground(new java.awt.Color(153, 0, 102));
+        lblIme2.setFont(new java.awt.Font("Gabriola", 3, 48)); // NOI18N
+        lblIme2.setForeground(new java.awt.Color(204, 0, 51));
         lblIme2.setText("Upiši ime simpatije:");
         getContentPane().add(lblIme2);
-        lblIme2.setBounds(20, 100, 170, 42);
+        lblIme2.setBounds(120, 240, 470, 100);
 
         txtIme1.setBackground(java.awt.SystemColor.inactiveCaptionBorder);
-        txtIme1.setFont(new java.awt.Font("Gabriola", 3, 24)); // NOI18N
-        txtIme1.setForeground(new java.awt.Color(153, 0, 102));
+        txtIme1.setFont(new java.awt.Font("Gabriola", 3, 36)); // NOI18N
+        txtIme1.setForeground(new java.awt.Color(204, 0, 51));
+        txtIme1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 51)));
         getContentPane().add(txtIme1);
-        txtIme1.setBounds(190, 40, 140, 48);
+        txtIme1.setBounds(490, 130, 210, 50);
 
         txtIme2.setBackground(java.awt.SystemColor.inactiveCaptionBorder);
-        txtIme2.setFont(new java.awt.Font("Gabriola", 3, 24)); // NOI18N
-        txtIme2.setForeground(new java.awt.Color(153, 0, 102));
+        txtIme2.setFont(new java.awt.Font("Gabriola", 3, 36)); // NOI18N
+        txtIme2.setForeground(new java.awt.Color(204, 0, 51));
+        txtIme2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 51)));
         getContentPane().add(txtIme2);
-        txtIme2.setBounds(190, 90, 140, 48);
+        txtIme2.setBounds(490, 250, 210, 50);
 
         btnIzracunaj.setFont(new java.awt.Font("Gabriola", 3, 24)); // NOI18N
-        btnIzracunaj.setForeground(new java.awt.Color(153, 0, 102));
+        btnIzracunaj.setForeground(new java.awt.Color(204, 0, 51));
         btnIzracunaj.setText("IZRAČUNAJ");
+        btnIzracunaj.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 51), 1, true));
+        btnIzracunaj.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnIzracunaj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIzracunajActionPerformed(evt);
             }
         });
         getContentPane().add(btnIzracunaj);
-        btnIzracunaj.setBounds(190, 140, 140, 50);
+        btnIzracunaj.setBounds(530, 310, 140, 60);
 
-        lblRjesenje.setFont(new java.awt.Font("Gabriola", 3, 24)); // NOI18N
-        lblRjesenje.setForeground(new java.awt.Color(153, 0, 102));
+        lblRjesenje.setFont(new java.awt.Font("Gabriola", 3, 48)); // NOI18N
+        lblRjesenje.setForeground(new java.awt.Color(204, 0, 51));
         lblRjesenje.setText("RJEŠENJE:");
         getContentPane().add(lblRjesenje);
-        lblRjesenje.setBounds(20, 212, 150, 50);
+        lblRjesenje.setBounds(160, 370, 390, 90);
 
-        lblIspis.setFont(new java.awt.Font("Gabriola", 3, 36)); // NOI18N
-        lblIspis.setForeground(new java.awt.Color(153, 0, 102));
+        lblIspis.setFont(new java.awt.Font("Gabriola", 3, 48)); // NOI18N
+        lblIspis.setForeground(new java.awt.Color(204, 0, 51));
         getContentPane().add(lblIspis);
-        lblIspis.setBounds(40, 250, 430, 130);
+        lblIspis.setBounds(200, 410, 560, 130);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\WinUSER\\Desktop\\icon\\istockphoto-1360170364-612x612.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\WinUSER\\Desktop\\prava.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.setPreferredSize(new java.awt.Dimension(600, 400));
+        jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentResized(java.awt.event.ComponentEvent evt) {
+                jLabel1ComponentResized(evt);
+            }
+        });
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 600, 400);
+        jLabel1.setBounds(0, -40, 790, 590);
 
         pack();
         setLocationRelativeTo(null);
@@ -193,6 +209,11 @@ public class Prozor extends javax.swing.JFrame {
 		}
                
     }//GEN-LAST:event_btnIzracunajActionPerformed
+
+    private void jLabel1ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentResized
+        jLabel1.setSize(new Dimension(1800,1200));
+       
+    }//GEN-LAST:event_jLabel1ComponentResized
 
     /**
      * @param args the command line arguments
