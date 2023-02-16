@@ -8,7 +8,6 @@ package edunova;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
