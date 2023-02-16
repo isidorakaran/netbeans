@@ -212,7 +212,7 @@ public class Prozor extends javax.swing.JFrame {
 
     private void jLabel1ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentResized
         jLabel1.setSize(new Dimension(1800,1200));
-       
+
     }//GEN-LAST:event_jLabel1ComponentResized
 
     /**
