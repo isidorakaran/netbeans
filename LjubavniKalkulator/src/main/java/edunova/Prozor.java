@@ -6,7 +6,6 @@ package edunova;
 
 
 
-import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.ImageIcon;
