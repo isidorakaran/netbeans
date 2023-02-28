@@ -107,19 +107,19 @@ private Faker faker;
        }
     }
 
-    private void unesiOsobe(int komada) {
+    private void unesiOsobe(int osoba) {
          try {
            st=conn.createStatement();
            StringBuilder sb=new StringBuilder();
            sb.append("insert into osoba(ime,prezime,email) values ");
-           for(int i=0;i<komada;i++){
+           for(int i=0;i<osoba;i++){
                sb.append("('");
-               sb.append(faker.name().firstName());
+               sb.append(faker.name().firstName().replace("'", "\\'"));
                sb.append("','");
-               sb.append(faker.name().lastName());
+               sb.append(faker.name().lastName().replace("'", "\\'"));
                 sb.append("','");
-               sb.append(faker.internet().emailAddress());
-               sb.append("')");
+               sb.append(faker.internet().emailAddress().replace("'", "\\'"));
+               sb.append("'),");
                  
         }
            sb.deleteCharAt(sb.length()-1);
