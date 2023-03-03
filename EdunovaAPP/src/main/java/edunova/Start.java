@@ -7,6 +7,7 @@ package edunova;
 
 import edunova.util.PocetniInsert;
 
+
 /**
  *
  * @author WinUSER
@@ -14,6 +15,6 @@ import edunova.util.PocetniInsert;
 public class Start {
 
     public static void main(String[] args) {
-        PocetniInsert.izvedi();
+        new PocetniInsert();
     }
 }
