@@ -72,7 +72,7 @@ public class PocetniInsert {
             p.setIme(faker.name().firstName());
             p.setPrezime(faker.name().lastName());
             p.setEmail(faker.internet().emailAddress());
-          //p.setOib(Alati.dovuciOib());
+          p.setOib(Alati.dovuciOib());
             p.setIban(faker.business().creditCardNumber());
             
             session.persist(p);
@@ -88,7 +88,7 @@ public class PocetniInsert {
             p.setIme(faker.name().firstName());
             p.setPrezime(faker.name().lastName());
             p.setEmail(faker.internet().emailAddress());
-          //p.setOib(Alati.dovuciOib());
+          p.setOib(Alati.dovuciOib());
             p.setBrojUgovora(faker.business().creditCardNumber());
             
             session.persist(p);
