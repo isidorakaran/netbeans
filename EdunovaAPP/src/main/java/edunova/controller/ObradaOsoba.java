@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author WinUSER
  */
-public abstract class ObradaOsoba<T extends Osoba>extends Obrada<T>{
+public  class ObradaOsoba extends Obrada<Osoba>{
 
     @Override
     protected void kontrolaUnos() throws EdunovaException {
@@ -34,6 +34,11 @@ public abstract class ObradaOsoba<T extends Osoba>extends Obrada<T>{
         if(Alati.kontrolaOib(entitet.getOib())){
             throw new EdunovaException("OIB nije u dobrom formatu");
         }
+    }
+
+    @Override
+    public List<Osoba> read() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
   

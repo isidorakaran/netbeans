@@ -10,6 +10,7 @@ import edunova.model.Grupa;
 import edunova.model.Polaznik;
 import edunova.model.Smjer;
 import edunova.util.EdunovaException;
+import edunova.util.PocetniInsert;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,13 +39,14 @@ public class Start {
         for(Smjer s : os.read()){
             System.out.println(s.getNaziv());
         }*/
-        ObradaGrupa og=new ObradaGrupa();
+      /* ObradaGrupa og=new ObradaGrupa();
         for(Grupa g: og.read()){
             System.out.println(g.getNaziv());
             System.out.println(g.getPredavac().getIme());
             for(Polaznik p:g.getPolaznici()){
                 System.out.println("\t" + p.getIme() );
             }
-        }
+        }*/
+       new PocetniInsert();
     }
 }

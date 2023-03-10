@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author WinUSER
  */
-public class ObradaPredavac extends ObradaOsoba<Predavac> {
+public class ObradaPredavac extends Obrada<Predavac> {
 
     @Override
     public List<Predavac> read() {
@@ -21,17 +21,17 @@ public class ObradaPredavac extends ObradaOsoba<Predavac> {
 
     @Override
     protected void kontrolaUnos() throws EdunovaException {
-        super.kontrolaUnos(); 
+        kontrolaUnos(); 
     }
 
     @Override
     protected void kontrolaPromjena() throws EdunovaException {
-        super.kontrolaPromjena(); 
+       kontrolaPromjena(); 
     }
 
     @Override
     protected void kontrolaBrisanje() throws EdunovaException {
-        super.kontrolaBrisanje(); 
+        kontrolaBrisanje(); 
     }
     
 }

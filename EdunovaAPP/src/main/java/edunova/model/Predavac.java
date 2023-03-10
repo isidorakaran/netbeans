@@ -1,19 +1,34 @@
 package edunova.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Predavac extends Osoba {
+public class Predavac extends Entitet {
 	private String iban;
+        @ManyToOne
+        private Osoba osoba;
+        
 
 	public Predavac() {
 		super();
 	}
 
-	public Predavac(int sifra, String ime, String prezime, String oib, String email, String iban) {
-		super(sifra, ime, prezime, oib, email);
-		this.iban = iban;
-	}
+    public Predavac(String iban, Osoba osoba, int sifra) {
+        super(sifra);
+        this.iban = iban;
+        this.osoba = osoba;
+    }
+
+    public Osoba getOsoba() {
+        return osoba;
+    }
+
+    public void setOsoba(Osoba osoba) {
+        this.osoba = osoba;
+    }
+
+	
 
 	public String getIban() {
 		return iban;
